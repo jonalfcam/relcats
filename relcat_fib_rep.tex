@@ -1,0 +1,417 @@
+\documentclass[english]{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+\usepackage{xypic,amsthm,amssymb,hyperref,amsmath,graphicx,stmaryrd,boxedminipage,mathrsfs,fullpage,manfnt,color}
+\usepackage[all]{xy}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage[mathcal]{euscript}
+\usepackage{calligra}
+\usepackage{sseq}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\sma}{\wedge}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\ti}{\;\;\makebox[0pt]{$\top$}\makebox[0pt]{$\cap$}\;\;}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\gl}{\mathfrak{gl}}
+\newcommand{\SL}{\operatorname{SL}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\o}{\mathfrak{o}}
+\newcommand{\SO}{\operatorname{SO}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\symp}{\mathfrak{sp}}
+\newcommand{\SU}{\operatorname{SU}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\ext}{\operatorname{Ext}}
+\newcommand{\tor}{\operatorname{Tor}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\obj}{\operatorname{obj}}
+\newcommand{\id}{\operatorname{Id}}
+\newcommand{\st}{\operatorname{st}}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\syl}{\operatorname{Syl}}
+\newcommand{\var}{\operatorname{Var}}
+\newcommand{\ann}{\operatorname{Ann}}
+\newcommand{\gal}{\operatorname{Gal}}
+\newcommand{\nil}{\operatorname{nil}}
+\newcommand{\map}{\operatorname{Map}}
+\newcommand{\res}{\operatorname{Res}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\rel}{\operatorname{rel}}
+\newcommand{\vect}{\operatorname{Vect}}
+\newcommand{\boxit}[1]{\begin{boxedminipage}{13cm} #1 \end{boxedminipage}}
+\newcommand{\triv}{\operatorname{Triv}}
+\newcommand{\Sq}{\operatorname{Sq}}
+\newcommand{\sq}{\operatorname{Sq}}
+\newcommand{\aind}{\operatorname{a-ind}}
+\newcommand{\tind}{\operatorname{t-ind}}
+\newcommand{\mo}{\mathbf{MO}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\td}{\operatorname{Td}}
+\newcommand{\ahat}{\widehat{A}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\weakequiv}{\xrightarrow{\sim}}
+\newcommand{\cofib}{\hookrightarrow}
+\newcommand{\fib}{\twoheadrightarrow}
+\newcommand{\xycofib}{^{(}->}
+\newcommand{\xyfib}{->>}
+\newcommand{\Ho}{\operatorname{Ho}}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\Shom}{\text{\calligra Hom}}
+\renewcommand{\div}{\operatorname{div}}
+\newcommand{\Weil}{\operatorname{Weil}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\fun}{\operatorname{Fun}}
+\newcommand{\mc}{\mathcal}
+\newcommand{\hh}{\operatorname{HH}}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\thh}{\operatorname{THH}}
+\newcommand{\tc}{\operatorname{TC}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\spsh}{\operatorname{sPSh}}
+\newcommand{\Map}{\operatorname{Map}}
+\newcommand{\EP}{\widetilde{E}\mathcal{P}}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\llp}{\stackrel{L}{\boxslash}}
+\newcommand{\rlp}{\stackrel{R}{\boxslash}}
+\newcommand{\ho}{\operatorname{Ho}}
+\newcommand{\trivcofib}{\stackrel{\sim}{\hookrightarrow}}
+\newcommand{\trivfib}{\stackrel{\sim}{\twoheadrightarrow}}
+\newcommand{\Cat}{\mathscr{C}\text{at}}
+\newcommand{\cat}{\mc{C}\text{at}}
+\newcommand{\sset}{\mc{S}\text{et}_\Delta}
+\newcommand{\N}{\operatorname{N}}
+\newcommand{\ques}[1]{\textcolor{red}{#1}}
+\newcommand{\Ex}{\operatorame{Ex}}
+\newcommand{\sd}{\operatorname{sd}}
+\DeclareMathOperator*{\hocolim}{hocolim} 
+\DeclareMathOperator*{\holim}{holim}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{prop}{Proposition}
+
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{fact}{Fact}
+\newtheorem*{const}{Construction}
+\newtheorem*{notation}{Notation}
+
+\title{Fibrant Replacement in $\sset^+$}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+\section{Intuition}
+
+
+The main idea here is that given a relative category $(\mbf{C},\mbf{W})$ we can get a marked simplicial set via $(\operatorname{N}\mbf{C},\operatornae{N}\mbf{W})$. However, this marked simplicial set will not represent a quasi-category together with its weak equivalences. That is, it won't be a fibrant object in the cartesian model structure for $(\sset^+)_{/\ast}$.  However, there should be a way to fix this using a ``double $\operatorname{Ex}^2$'' construction, as in the paper of Barwick-Kan (\textbf{CITE}). 
+
+For the nerve of our relative category $(\operatorname{N}\mbf{C},\operatorname{N}\mbf{W})$ why is this not a fibrant marked simplicial set? The answer is that the elements of $\operatorname{N}\mbf{W}$ need not satisfy the appropriate lifting conditions to classify them as weak equivalences in $\operatorname{N}\mbf{C}$. Similarly, morphisms that are weak equivalences in $\operatorname{N}\mbf{C}$ need not lie in $\operatorname{N}\mbf{W}$. 
+
+How do we correct this? The idea will be some kind of $\operatornam{Ex}$ functor. The problem with our set-up as-is, is that our simplices are in some sense ``wrong''. We create a new simplicial set with simplices that are maps out of some some sub-divided simplex that will contain the correct weak equivalences. This divided simplex will serve to pick out the proper weak equivalences to lift. 
+
+To do this we have to use the formalism of marked simplicial sets (CITE LURIE).
+
+Here is a rough example of the procedure. 
+
+\begin{example}
+Suppose we have the following category with weak equivalences and we want to turn it into an equivalent quasi-category
+\[
+\xymatrix{
+ & \bullet \ar[dr]^\sim & \\
+\bullet \ar[ur] \ar[rr] & & \bullet
+}
+\]
+
+Now, we look at maps of $\operatorname{sd}^i \Delta^0$, $\operatorname{sd}^i \Delta^1$ and $\operatorname{sd}^i \Delta^2$ (and higher) into this complex. Here is what these three look like: 
+
+\begin{enumerate}
+\item Unsurprisingly $\operatorname{sd}^i \Delta^0$ is just a point
+\item $\operatorname{sd}^i \Delta^1$ looks like
+\[
+\xymatrix{
+0 & 01 \ar[l]_\sim \ar[r] & 1
+}
+\]
+\item $\operatorname{sd}^i \Delta^2$ looks like
+\[
+\xymatrix{
+ & & 1 & & \\
+ & 01\ar[ur]\ar[ddl] & & 12 \ar[ul]\ar[ddr]& \\
+ & & 012\ar[uu]\ar[dll]\ar[drr] \ar[ul]\ar[ur]\ar[d] & & \\
+0 & &02\ar[ll]\ar[rr] & & 2
+} 
+\]
+\end{enumerate}
+\end{example}
+
+We go about creating a new marked simplicial set via the following procedure. 
+
+
+
+
+
+\section{Reminder on $\operatorname{Ex}$}
+
+\section{Recollections on Marked Simplcial Sets and Marked Anodyne Maps}
+
+We recall the definitions of marked simplicial set and marked anodyne map from \cite{Lurie:2009tn}. 
+
+\begin{defn}
+A morphism of marked simplcial sets is a simplcial map $(X, \mc{E}) \to (X',\mc{E}')$ such that $f(\mc{E}) \subset \mc{E}'$. 
+\end{defn}
+
+Recall that there are 4 basic types of marked anodyne maps, and that these generate all such. 
+
+\begin{enumerate}
+\item The inclusion $(\Lambda^n_i)^\flat \hookrightarrow (\Delta^n)^\flat$ for $0 < i < n$. 
+\item The inclusion $(\Lambda^n_n, (\Lambda^n_n)_1 \cap \mc{E}) \hookrightarrow (\Delta^n, \mc{E})$, where $\mc{E}$ is the collection of all of the degenerate edges in $\Delta^n$, together with the final edge $\Delta^{\{n-1,n\}}$. 
+\item The inclusion
+\[
+(\Lambda^2_1)^\sharp \coprod_{(\Lambda^2_1)^\flat} (\Delta^2)^\flat \hookrightarrow (\Delta^2)^\sharp
+\]
+\item Let $K$ be a Kan complex. The map
+\[
+K^\flat \to K^\sharp. 
+\]
+\end{enumerate}
+
+\section{Some Definitions}
+
+We define initial and terminal subvidisions, following \cite{Barwick:2010wj}. 
+
+\begin{notation}
+As usual, let $[n]$ denote the set $\{0, \dots, n\}$.  Let $\mc{P}\text{ow}(S)$ denote the power poset of $S$. Morphisms are containments of sets, e.g. $\{0,1,2\} \to \{0,2\}$.  
+\end{notation}
+
+\begin{defn}
+The \textbf{initial subdivision of $\Delta^n$} is defined by be $N \mc{P}\text{ow}([n])$. The markings are defined as follows. Every edge in $N \mc{P}\text{ow}([n])$ is given by a set containment $e : A \supset B$. Marked the edge if $\operatorname{min}(A) = \operatorname{min}(B)$. 
+\end{defn}
+
+\begin{defn}
+The \textbf{terminal subdivision of $\Delta^n$} is defined to be $N (\mc{P}\text{ow}[n])^{\text{op}}$. In this case edges are set containments $e: A \subset B$. Mark the edge $e$ if $\max (A) =\max(B)$. 
+\end{defn}
+
+\ques{Say something about the faces and degeneracies}
+
+\begin{notation}
+We'll denote the initial and terminal subdivisions by $\operatorname{sd}^i \Delta^n$ and $\operatorname{sd}^t \Delta^n$ respectively. 
+\end{notation}
+
+\begin{rmk}
+Note that there is an initial vertex map $\opertorname{sd}^i \Delta^n \to \Delta^n$ given by $\{a, b, \dots\} \mapsto a$. This in fact gives a homotopy. 
+\end{rmk}
+
+\begin{defn}
+There is a map $Y \to \operatorname{Ex}^i Y$ defined to be adjoint to the above final-vertex map. More explicitly, it is given by mapping edges $a\to b$ to edges $a \xleftarrow{\sim} a \to b$, where the left-pointing arrow is degenerate. Similarly for higher simplices. 
+\end{defn}
+
+Before we go on to define the $\operatorname{Ex}^i$ and $\operatorname{Ex}^d$ functors, we pause for an example that will be helpful in figuring out how edges are marked after applying $\operatorname{Ex}$.
+
+\begin{example}
+We know that $\operatorname{sd}^i \Delta^1$ looks like the following:
+\[
+\xymatrix{
+\bullet  & \bullet \ar[l]_\sim \ar[r] & \bullet
+}
+\]
+where the tilde indicates a marking. Given a marked simplicial set $(X,\mc{E})$ what are the possible images of $\operatorname{sd}^i \Delta^1$ in it?
+
+\begin{enumerate}
+\item We have the case where the marked edge gets mapped to a degenerate edge
+\[
+\xymatrix{
+a  & a \ar[l]_\sim \ar[r] & b
+}
+\]
+\item We have the case where the marked edge gets map to a non-degenerate marked edge, and the unmarked edge gets mapped to wherever
+\[
+\xymatrix{
+y  & x \ar[l]_\sim \ar[r] & z
+}
+\]
+\item The unmarked edge gets mapped to a marked edge (degenerate or non-degenerate)
+\[
+\xymatrix{
+y  & x \ar[l]_\sim \ar[r]^\sim & w
+}
+\]
+\end{enumerate}
+It is in this final case that we'll refer to the new edge as ``marked''. 
+\end{example} 
+
+
+
+
+\begin{defn}
+Let $(Y, \mc{E})$ be a marked simplicial set. We define the \textbf{initial Ex} functor to have $n$-simplices $\operatorname{sd}^i \Delta^n \to (Y,\mc{E})$. We mark the edges $\operatorname{sd}^i \Delta^1 \to (Y,\mc{E})$ according to the scheme above.  
+\end{defn}
+
+\begin{rmk}
+As is usual with cases like this, we have adjunctions:
+\begin{align*}
+\operatorname{sd}^i &: \sset^+ \leftrightarrows \sset^+ : \operatorname{Ex}^i\\
+\operatorname{sd}^t & : \sset^+ \leftrightarrows \sset^+ : \operatorname{Ex}^t
+\end{align*}
+\end{rmk}
+
+
+
+
+
+
+
+
+
+\section{Main Theorem}
+
+What we want to show is that our double-Ex construction has the right-lifting property with respect to all marked anodyne maps. This amounts to showing that it has the right lifting propery with respect to the marked anodyne maps enumerated in the section above. By adjointness, we must lift
+\[
+\xymatrix{
+\operatorname{sd}^i \operatorname{sd}^t A \ar[r]\ar[d] & (X,\mc{E})\\
+\operatorname{sd}^i \operatorname{sd}^t B \ar@{.>}[ur] & 
+}
+\]
+We'll do this by hand in each of the important cases. We begin by noting that three of the cases are trivial. 
+
+\begin{prop}
+$\operatorname{Ex}^i X^\flat = X^\flat$ for any simplicial set $X$. 
+\end{prop}
+\begin{proof}
+We consider the possible edges for $\Ex^i X^\flat$, i.e. the set of maps
+\[
+\sd^i \Delta^1 \to X^\flat. 
+\]
+Because none of the edges of $X^\flat$ are marked the only possible image for $\leftarrow \rightarrow$ are when the left-pointing arrow is degenerate. 
+
+Similarly, for higher-dimensional simplicies $\sd^i \Delta^n \to X^\flat$, the only possible images are when every marked edge is degenerate. 
+\end{proof}
+
+\begin{cor}
+$\Ex^i (Y,\mc{E})$ has the right lifting property with respect to $(\Lambda^n_k)^\flat \to (\Delta^n)^\flat$. 
+\end{cor}
+
+
+
+
+
+\begin{defn}
+An edge, $e$, is \textbf{weakly invertible} if there is another edge $f$ where $d_0 (e) = d_1 (f)$, $d_1 (e) = d_0 (f)$ and a 2-simplex
+\[
+\xymatrix{
+ &  d_1 (e) \ar[dr]^f & \\
+d_0 (e) \ar[ur]^e \ar[rr]_{s_2 d_0 (e)} & & d_1 (f) 
+}
+\]
+\end{defn}
+
+\begin{rmk}
+Intuitively this means we can invert the morphism $e$. 
+\end{rmk}
+
+\begin{prop}
+After apply $\Ex$, marked edges become weakly invertible. 
+\end{prop}
+\begin{proof}
+This just amounts to the diagram
+\[
+\xymatrix{
+ & & b & & \\
+ & a\ar[ur]\ar[ddl] & & a \ar[ul]\ar[ddr]& \\
+ & & a\ar[uu]\ar[dll]\ar[drr] \ar[ul]\ar[ur]\ar[d] & & \\
+c & &c\ar[ll]\ar[rr] & & c
+} 
+\]
+The ``edge'' from $c \to b$ on the left, followed by $b \to c$ on the right can be filled in to be of the required form. 
+\end{proof}
+
+
+
+
+
+
+
+\begin{prop}
+Let $X$ be a quasicategory. Then the following can be lifted
+\[
+\xymatrix{
+(\operatorname{sd}^t \Delta^2, \mc{E}_t) \ar[d]\ar[r] & (X,\mc{E}) = X^\natural\\
+(\Delta^2)^\flat \ar@{-->}[ur] & 
+}
+\]
+\end{prop}
+\begin{proof}
+Just has to do with how the weak equivalences look, and the condition for being a weak equivalence. 
+\end{proof}
+
+What will this buy us? Well, the canonical map relating $\operatorname{Ex}^t Y$ and $Y$ really goes the wrong direction for us, i.e. it goes $Y \to \operatorname{Ex}^t Y$. We would like a map $\operatorname{Ex}^t Y \to Y$. On $n$ simplices this is a map of sets
+\[
+\{\operatorname{sd} \Delta^n \to \operatorname{Ex}^t Y\} \to \{\operatorname{\Delta}^n \to Y\}
+\]
+If this lifitings can happen coherently, then we get a (thorougly) non-canonical map of the form we want. 
+
+\begin{lem}
+If the $(n-1)$-simplices are fixed, we can still lift. 
+\end{lem}
+
+
+\begin{prop}
+The map $(Y,\mc{E}) \to (\operatorname{Ex}^t, \mc{E}')$ is a Cartesian equivlence in the model structure for $\sset^+ = (\sset^+)_{/\ast}$. 
+\end{prop}
+\begin{proof}
+Weak equivalences in the cartesian model structure arise when for every Cartesian fibration $Z \to \ast$ (i.e. every marked simplicial set where the marked edges are exactly the weak equivalences) we have a homotopy equivalences of Kan complexes
+\[
+\map^\sharp((\operatorname{Ex}^t, \mc{E}'), Z^\natural) \to \map^\sharp ((Y,\mc{E}), Z^\natural)
+\]
+
+First, we construct a map in the opposite direction. This is done by iterated lifting. Then construct the homotopy 
+\end{proof}
+
+\section{Construction}
+
+\begin{enumerate}
+\item Combinatorics
+
+\item Fill-ins. 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
