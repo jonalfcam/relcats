@@ -206,6 +206,29 @@ K^\flat \to K^\sharp.
 \]
 \end{enumerate}
 
+\section{Recollections on 3-Arrow Calculi}
+
+Let $\mc{C}$ be a category with weak equivalences $\mc{W}$. Suppose we have subcategories of weak equivalences $\mc{U},\mc{V} \subset \mc{W}$. We say that $(\mc{C},\mc{W})$ \textbf{has a 3-arrow calculus} if 
+\begin{enumerate}
+\item Given $A' \xleftarrow{u} A \xrightarrow{f} B$ with $u \in \mc{U}$ such that the following commutes
+\[
+\xymatrix{
+ & A \ar[dl]_u \ar[dr]^f & \\
+A'\ar[dr] & & B \ar[dl]^{u' \in U}\\
+ & B' & 
+}
+\]
+\item Given $X \to Y \xleftarrow{v} Y'$  we have a $v' in \mc{V}$ such that 
+\[
+\xymatrix{
+ & Y & \\
+X \ar[ur] & & Y \ar[ul]^v\\
+ & X' \ar[ul]^{v'} \ar[ur]_{g'} & 
+}
+\]
+\item Any $w \in \mc{W}$ admits functorial factorization $w = uv$ with $u \in \mc{U}$ and $v \in \mc{V}$. 
+\end{enumerate}
+
 \section{Some Definitions}
 
 We define initial and terminal subvidisions, following \cite{Barwick:2010wj}. 
